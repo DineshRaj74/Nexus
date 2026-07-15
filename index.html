@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Nexus Digitalia</title>
 </head>
@@ -13,7 +12,7 @@
 <body>
 
     <!--Top-Align-->
-    <center>
+    <div class="top-contact-wrap">
         <div id="top-icon">
             <div id="location">
                 <img src="./images/location.png" alt="Location Logo">
@@ -28,7 +27,7 @@
                 <span>business@nexusdigitalia.com</span>
             </div>
         </div>
-    </center>
+    </div>
 
     <!--Nav-link-->
     <nav class="navbar navbar-expand-lg site-navbar">
@@ -51,12 +50,12 @@
 
                 <div class="offcanvas-body">
                     <ul class="navbar-nav nav-links ms-lg-auto mb-3 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html">About us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Career</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./index.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about-us">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#career">Career</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pot">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#form-cont">Contact</a></li>
                     </ul>
 
                     <button class="enquire-btn" type="button">Enquire Now</button>
@@ -98,7 +97,7 @@
 
     <section>
         <!---->
-        <div class="custom-development">
+        <div class="custom-development" id="home">
             <div class="container">
                 <div class="custom-development-inside">
                     <div class="row align-items-center">
@@ -123,7 +122,8 @@
                 </div>
             </div>
         </div>
-        <div class="custom-development-mb-5">
+
+        <div class="custom-development-mb-5" id="about-us">
             <div class="container">
                 <div class="custom-development-1">
                     <div class="row align-items-center">
@@ -173,8 +173,9 @@
             </div>
         </div>
 
+        <!--Box-->
         <!--Left Right Box-->
-        <div class="container">
+        <div class="container" id="services">
             <div class="row g-4">
                 <!-- Left Side -->
                 <div class="col-lg-4">
@@ -502,13 +503,13 @@
             </div>
         </div>
 
-        <center class="center">
+        <div class="process-heading section-heading">
             <h1>Our Process</h1>
             <p>We build custom software that's stable and secure using various tech tools.</p>
-        </center>
+        </div>
 
         <!--Box-->
-        <div class="custom-development">
+        <div class="custom-development" id="career">
             <div class="container">
                 <div id="top">
                     <div class="row">
@@ -556,9 +557,9 @@
                             </div>
                         </div>
 
-                        <center>
+                        <div class="action-center">
                             <button class="cart-btn">Schedule a Call</button>
-                        </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -580,101 +581,104 @@
         </div>
 
         <!--Stand out-->
-        <div class="container">
-            <center id="standout">
-                <h4>What makes Nexus Digitalia stand out?</h4>
-                <p>The company you pick for software development can make or break your project. That's why we at
-                    Nexus
-                    Digitalia think we're your best bet to meet your software development needs. Here's why:</p>
-            </center>
+        <div class="standout-section">
+            <div class="container">
+                <div id="standout" class="standout-header">
+                    <span class="section-eyebrow">Why Choose Nexus Digitalia</span>
+                    <h2>What Makes Us Stand Out?</h2>
+                    <p>
+                        Choosing the right software development partner can shape the success of your project.
+                        Nexus Digitalia brings together strategy, engineering, and long-term support to build
+                        solutions that match your business goals.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!--Experience And Expertise-->
-        <div class="custom-development">
+        <div class="custom-development" id="pot">
             <div class="container">
-                <div id="top">
+                <div class="standout-grid">
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="card-box1">
+                                <span class="card-number">01</span>
                                 <h5>Experience And Expertise</h5>
-                                <p>Nexus Digitalia gives businesses a complete high-quality solution to grow. Our
-                                    capable and well-informed software engineers make us the top software solution
-                                    company</p>
+                                <p>Our skilled engineers deliver reliable software solutions that help businesses grow
+                                    with confidence.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="card-box1">
+                                <span class="card-number">02</span>
                                 <h5>Customized Solutions</h5>
-                                <p>Nexus Digitalia excels in business with its perfect and skilled software
-                                    engineers.
-                                    We take our duty to provide the best-tailored solution for each business
-                                    seriously
-                                </p>
+                                <p>We design each solution around your business needs, workflows, audience, and growth
+                                    goals.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="card-box1">
+                                <span class="card-number">03</span>
                                 <h5>Customer-Centric Approach</h5>
-                                <p>Nexus Digitalia offers businesses consultants who grasp the business motive and
-                                    suggest solutions as needed, along with a pool of talented software engineers.
-                                </p>
+                                <p>We listen closely, understand your priorities, and recommend practical solutions
+                                    that support real outcomes.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="card-box1">
+                                <span class="card-number">04</span>
                                 <h5>Affordable Services</h5>
-                                <p>Nexus Digitalia, a well-known agile software development company, helps
-                                    businesses
-                                    by delivering fresh and attractive solutions within their budget limits.</p>
+                                <p>Our agile process helps you get modern, effective software while staying aligned
+                                    with your budget.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="card-box1">
+                                <span class="card-number">05</span>
                                 <h5>Cutting-Edge Technology</h5>
-                                <p>The company employs skilled software engineers and uses a broad range of advanced
-                                    technologies to help your business stand out</p>
+                                <p>We use modern tools and technologies to create scalable products that stay ready for
+                                    the future.</p>
                             </div>
                         </div>
 
                         <div class="col-lg-4">
                             <div class="card-box1">
+                                <span class="card-number">06</span>
                                 <h5>Quality Assurance</h5>
-                                <p>We move forward aiming to provide top-notch high-definition graphic software
-                                    solutions that make people's lives better.
-                                </p>
+                                <p>Every project is reviewed, tested, and refined so your users receive a smooth and
+                                    dependable experience.</p>
                             </div>
                         </div>
 
-                        <center>
+                        <div class="standout-action">
                             <button class="cart-btn">Let's Talk</button>
-                        </center>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!--Slide-->
-        <center class="slide">
+        <div class="slide section-heading">
             <h2>Testimonial </h2>
             <h4>What Say Our Clients!</h4>
-        </center>
-        <br>
+        </div>
 
         <!--Founder Botton-->
-        <div class="custom-development">
+        <div class="custom-development testimonial-section">
             <div class="container">
                 <div class="col-lg-12">
-                    <center>
+                    <div class="carousel-wrap">
                         <div id="carouselExample" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <!-- <img src="..." class="d-block w-100" alt="..."> -->
                                     <h4>They have a good team for development.
-                                        <br> Make than less Karthick Support was very good
+                                        Make than less Karthick Support was very good
                                     </h4>
                                     <p class="name">Bharath</p>
                                     <span class="title">Founder</span>
@@ -688,7 +692,7 @@
                                 </div>
                                 <div class="carousel-item">
                                     <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                                    <h5>The Client Managemant Software is easier to follow through <br>
+                                    <h5>The Client Managemant Software is easier to follow through
                                         and track our order.The Changes requested are accommodation soon by Nexus
                                         Digitalia team.Over all
                                         had a good experience </h5>
@@ -714,27 +718,25 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>
-                    </center>
+                    </div>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
 
         <!--Frequently Asked Questions-->
-        <center>
+        <div class="faq-header section-heading">
             <h2>Frequently Asked Questions</h2>
             <p class="color">We have taken a few frequently asked questions with regards to app development and got
                 them
                 answered from
                 our skilled app developers. Here is the list</p>
-        </center>
+        </div>
 
         <!--Alert Question-->
-        <div class="custom-development">
+        <div class="custom-development faq-section">
             <div class="container">
                 <div class="col-lg-12">
-                    <center>
+                    <div class="faq-accordion-wrap">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="flush-headingOne">
@@ -793,28 +795,26 @@
                                 </div>
                             </div>
                         </div>
-                    </center>
+                    </div>
                 </div>
             </div>
         </div>
-        <br><br>
 
         <!--Form-->
-        <center>
-            <div class="custom-development7">
+        <div class="contact-section">
+            <div class="custom-development7" id="form-cont">
                 <div id="contactForm">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-left">
                                 <h3>GET IN TOUCH</h3>
                                 <h1>
-                                    <span class="yellow">Convey Your</span><br>
-                                    <span class="white1">Ideas to Us</span>
+                                    <span class="yellow heading-line">Convey Your</span>
+                                    <span class="white1 heading-line">Ideas to Us</span>
                                 </h1>
                                 <p>
-                                    Contact us for questions, technical assistance,<br>
-                                    or collaboration opportunities via the contact<br>
-                                    information provided.
+                                    Contact us for questions, technical assistance, or collaboration opportunities via
+                                    the contact information provided.
                                 </p>
                             </div>
                         </div>
@@ -839,8 +839,7 @@
                     </div>
                 </div>
             </div>
-        </center>
-        <br><br><br>
+        </div>
 
         <!--Right-Nav-->
         <div class="fixed-actions">
@@ -924,19 +923,11 @@
                             <img src="./images/ytfoot.gif" alt="Youtube">
                             <img src="./images/infoot.gif" alt="Linkedln">
                             <!-- <img src="./images/xfoot.png" alt="X"> -->
-                            <p><br>
-                                Phone:
-                                6381476847 <br>
-                                <span class="pad">
-                                    8124798358 <br>
-                                </span>
-                                <span class="pad">
-                                    8870836678 <br>
-                                </span>
-                                <span class="pad">
-                                    Email:
-                                    business@nexusdigitalia.com
-                                </span>
+                            <p class="footer-contact">
+                                <span>Phone: 6381476847</span>
+                                <span>8124798358</span>
+                                <span>8870836678</span>
+                                <span>Email: business@nexusdigitalia.com</span>
                             </p>
                         </div>
                     </div>
@@ -963,15 +954,13 @@
 
                 <!--Copyright-->
                 <div class="footer-bottom">
-                    <center>
-                        <p>Copyright © 2024 Nexus Digitalia. All Rights Reserved.</p>
-                    </center>
+                    <p>Copyright © 2024 Nexus Digitalia. All Rights Reserved.</p>
                 </div>
 
             </div>
         </footer>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script>
         document.getElementById('submitBtn').addEventListener('click', function () {
