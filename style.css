@@ -84,62 +84,20 @@
     background-color: rgba(187, 17, 218, 0.877);
     padding: 5px;
     color: white;
-    border: none;
-    border-radius: 2px solid white;
+    border: 2px solid transparent;
     border-radius: 10px;
     width: 180px;
     height: 50px;
 }
 
 img {
-    width: 550px;
+    max-width: 100%;
+    height: auto;
 }
 
 a {
     text-decoration: none;
 }
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background-color: white;
-    box-shadow: 0px 0px 0px;
-    overflow: hidden;
-}
-
-.logo img {
-    width: 170px;
-    height: 70px;
-    display: block;
-    padding-left: 30px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 400px;
-    color: rgb(0, 0, 0);
-    transition: color 0.3s ease;
-    padding-left: 10px;
-    /* padding-right: 50px; */
-}
-
 
 .enquire-btn {
     display: inline-block;
@@ -172,7 +130,7 @@ a {
 h4 {
     border-radius: 30px;
     box-sizing: border-box;
-    box-shadow: 6px;
+    box-shadow: none;
     padding-top: 10px;
     font-weight: bold;
     font-size: 10px;
@@ -180,16 +138,11 @@ h4 {
 
 }
 
-.col-lg-3 {
-    display: flex;
-    gap: 40px;
-}
-
 .left-box {
     background: #fff;
     padding: 30px;
     box-shadow: 0 0 20px rgb(189, 202, 215);
-    height: 650px;
+    min-height: 650px;
 }
 
 .left-box h3 {
@@ -243,20 +196,8 @@ h4 {
     padding-top: 30px;
 }
 
-.card-box {
-    /*display: grid;
-    gap: 20px;
-    height: 200px;
-    margin-bottom: 30px;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 25px;
-    box-sizing: border-box;
-    border: 2px solid rgb(151, 55, 55);
-    border-radius: 30px; */
-
-    height: 230px;
+.card-box,
+.card-box1 {
     border: 2px solid #dad7d7;
     border-radius: 20px;
     padding: 30px;
@@ -272,38 +213,40 @@ h4 {
     box-shadow: 5px 5px 5px 5px rgb(199, 193, 193);
 }
 
-.card-box h5 {
+.card-box {
+    min-height: 230px;
+}
+
+.card-box1 {
+    min-height: 280px;
+}
+
+.card-box h5,
+.card-box1 h5 {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.card-box p {
+.card-box p,
+.card-box1 p {
     font-size: 1.1rem;
     font-weight: 350;
 }
 
-.card-box:hover {
+.card-box:hover,
+.card-box1:hover {
     background-color: rgba(187, 13, 200, 0.715);
-    transform: translate(-5px, -5px);
-    transition: 3s;
+    transition: 0.3s;
 }
 
-.cart-btn {
-    height: 70px;
-    width: 210px;
-    margin-top: 30px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgb(224, 9, 224);
-    border: 1px solid white;
-    font-weight: inherit;
-    font-size: larger;
+.card-box:hover {
+    transform: translate(-5px, -5px);
 }
 
 .banner {
     display: flex;
-    flex-direction: space-between;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, #a855f7, #9333ea);
     border-radius: 16px;
@@ -349,49 +292,20 @@ h4 {
     padding-top: 40px;
 }
 
-.card-box1 {
-    /*display: grid;
-    gap: 20px;
-    height: 200px;
-    margin-bottom: 30px;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding-top: 25px;
-    box-sizing: border-box;
-    border: 2px solid rgb(151, 55, 55);
-    border-radius: 30px; */
+#top .row {
+    align-items: stretch;
+    row-gap: 30px;
+}
 
-    height: 280px;
-    border: 2px solid #dad7d7;
-    border-radius: 20px;
-    padding: 30px;
-    background: #fff;
-    margin-bottom: 30px;
+#top .row>.col-lg-4 {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Vertical center */
-    align-items: center;
-    /* Horizontal center */
-    text-align: center;
-    box-shadow: 5px 5px 5px 5px rgb(199, 193, 193);
 }
 
-.card-box1 h5 {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.card-box1 p {
-    font-size: 1.1rem;
-    font-weight: 350;
-}
-
-.card-box1:hover {
-    background-color: rgba(187, 13, 200, 0.715);
-    transition: 0.3s;
+#top .card-box1 {
+    width: 100%;
+    height: 100%;
+    min-height: 310px;
+    margin-bottom: 0;
 }
 
 .cart-btn {
@@ -473,24 +387,13 @@ h4 {
 
 
 #contactForm {
-    /* border: 1px solid red; */
-    width: 1150px;
-    height: 420px;
+    width: min(100%, 1150px);
+    max-width: calc(100% - 32px);
+    min-height: 420px;
     display: flex;
-    /* Aligns left and right columns side-by-side */
     align-items: center;
     padding: 20px;
     background-color: rgb(233, 233, 239);
-}
-
-.row {
-    display: flex;
-    width: 100%;
-}
-
-
-.col-lg-6 {
-    flex: 1;
 }
 
 .form-left {
@@ -502,7 +405,7 @@ h4 {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* Consistent spacing between rows */
+    width: 100%;
     max-width: 500px;
 }
 
@@ -540,13 +443,13 @@ textarea {
 /* Text styles from your original code */
 .yellow {
     color: #f1c40f;
-    font-size: 60px;
+    font-size: clamp(2rem, 5vw, 3.75rem);
     font-weight: bold;
 }
 
 .white1 {
     color: #000;
-    font-size: 60px;
+    font-size: clamp(2rem, 5vw, 3.75rem);
     font-weight: bold;
 }
 
@@ -598,25 +501,25 @@ textarea {
 }
 
 /* WhatsApp Button Styling */
-.whatsapp-btn {
-    width: 20px;
+.whatsapp-btn,
+.top-btn {
+    width: 44px;
     height: 44px;
-    border-radius: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     border: none;
     display: flex;
+    background: transparent;
     transition: transform 0.2s;
     text-decoration: none;
 }
 
-/* Top Button Styling */
-.top-btn {
-    width: 30px;
-    height: 40px;
-    border: none;
-    display: flex;
-    transition: transform 0.2s;
-    text-decoration: none;
-    /* background: black; */
+.whatsapp-btn img,
+.top-btn img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
 }
 
 .left-slide-btn {
@@ -729,7 +632,7 @@ span.pad {
     cursor: pointer;
 }
 
-.col-lg-12 {
+.footer-section .col-lg-12 {
     text-align: left;
     cursor: pointer;
     padding-top: 20px;
@@ -739,4 +642,533 @@ span.pad {
     padding-left: 570px;
     margin-top: -230px;
     cursor: pointer;
+}
+
+/* =========================
+   Responsive Code
+   Laptop, Tablet and Mobile
+   ========================= */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+}
+
+#top-icon {
+    width: min(850px, calc(100% - 32px));
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    padding: 10px 18px;
+}
+
+#top-icon>div {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#top-icon img {
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+.custom-development,
+.custom-development-mb-5 {
+    padding: clamp(28px, 5vw, 60px) 0;
+}
+
+.custom-development-left,
+.custom-development-right,
+.custom-development-2 {
+    width: 100%;
+}
+
+.custom-development-left h1,
+.custom-development-2 h1,
+.prabu,
+.one-box h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.18;
+}
+
+.custom-development-left p,
+.custom-development-2 p {
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+    line-height: 1.65;
+}
+
+.custom-development-left img,
+.custom-development-right img {
+    width: min(100%, 550px);
+}
+
+.list .row {
+    justify-content: center;
+    text-align: center;
+}
+
+.sch h4 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.banner {
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.talk-btn {
+    margin-left: 0;
+}
+
+#carouselExample,
+#accordionFlushExample {
+    width: min(100%, 1150px);
+    max-width: calc(100% - 32px);
+}
+
+#carouselExample {
+    min-height: 350px;
+    height: auto;
+}
+
+#carouselExample .carousel-item {
+    padding: 42px 58px;
+}
+
+#carouselExample h4,
+#carouselExample h5,
+.slide h4 {
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    line-height: 1.5;
+}
+
+.name {
+    padding-top: 28px;
+}
+
+.color {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#contactForm .row {
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sm {
+    padding-right: 0;
+    text-align: left;
+}
+
+.fixed-actions {
+    z-index: 1000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0;
+    align-items: flex-start;
+}
+
+.footer-section {
+    flex: 1 1 260px;
+    width: auto;
+    min-width: 260px;
+    max-width: 100%;
+}
+
+.footer-grid {
+    gap: 32px;
+}
+
+.si {
+    padding-left: 0;
+}
+
+.footer-image {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.footer-image img {
+    width: min(100%, 420px);
+}
+
+.footer-bottom {
+    width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+
+    .left-box,
+    .right-box {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .custom-development-left,
+    .custom-development-right,
+    .custom-development-2 {
+        text-align: center;
+    }
+
+    .custom-development-right {
+        margin-top: 28px;
+    }
+
+    .custom-development-mb-5 .custom-development-left {
+        margin-bottom: 28px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .banner {
+        padding: 36px 32px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .talk-btn {
+        width: min(100%, 220px);
+    }
+
+    #contactForm {
+        padding: 28px;
+    }
+
+    .form-left {
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .contact-form {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .sm {
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    .footer-section {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    #top-icon {
+        border-radius: 24px 10px;
+        justify-content: center;
+    }
+
+    .enquire-btn,
+    .custom-btn,
+    .cart-btn {
+        width: min(100%, 180px);
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .left-box,
+    .right-box,
+    .card-box,
+    .card-box1 {
+        padding: 22px;
+    }
+
+    .banner {
+        padding: 28px 18px;
+    }
+
+    #carouselExample .carousel-item {
+        padding: 34px 36px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 12%;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    #top-icon {
+        width: calc(100% - 20px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .custom-development,
+    .custom-development-mb-5 {
+        padding: 24px 0;
+    }
+
+    .left-box,
+    .right-box,
+    .card-box,
+    .card-box1 {
+        padding: 18px;
+        box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
+    }
+
+    .nav-pills .nav-link {
+        text-align: center;
+    }
+
+    .list {
+        margin-bottom: 24px !important;
+    }
+
+    #carouselExample,
+    #accordionFlushExample,
+    #contactForm {
+        max-width: calc(100% - 20px);
+    }
+
+    #carouselExample .carousel-item {
+        padding: 28px 28px;
+    }
+
+    #carouselExample h4,
+    #carouselExample h5 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #contactForm {
+        padding: 22px 16px;
+    }
+
+    .form-left p br {
+        display: none;
+    }
+
+    .frombtn {
+        width: 100%;
+    }
+
+    .fixed-actions {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    span.pad {
+        display: inline;
+        padding-left: 0;
+    }
+}
+
+/* Bootstrap responsive side menu */
+.site-navbar {
+    overflow: visible;
+    position: relative;
+    z-index: 1020;
+}
+
+.site-navbar .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.site-navbar .logo {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.site-navbar .logo img {
+    display: block;
+    width: clamp(130px, 15vw, 170px);
+    height: auto;
+    padding-left: 0;
+}
+
+.site-navbar .offcanvas-body {
+    align-items: center;
+    gap: 18px;
+}
+
+.site-navbar .nav-links {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 22px;
+    order: initial;
+    width: auto;
+}
+
+.site-navbar .nav-links .nav-link {
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 0;
+}
+
+.site-navbar .nav-links .nav-link:hover,
+.site-navbar .nav-links .nav-link:focus {
+    color: #9333ea;
+}
+
+.site-navbar .navbar-toggler {
+    border: 1px solid rgba(147, 51, 234, 0.35);
+    border-radius: 8px;
+    padding: 7px 9px;
+}
+
+.site-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.18);
+}
+
+.site-navbar .offcanvas-title {
+    color: #000;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+
+    .site-navbar .nav-container {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+        column-gap: 24px;
+    }
+
+    .site-navbar .nav-offcanvas {
+        width: 100%;
+    }
+
+    .site-navbar .offcanvas-body {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        justify-content: stretch;
+        gap: 24px;
+        padding: 0;
+    }
+
+    .site-navbar .nav-links {
+        justify-self: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .site-navbar .enquire-btn {
+        justify-self: end;
+    }
+}
+
+@media (max-width: 991.98px) {
+
+    .site-navbar {
+        padding: 14px 18px;
+    }
+
+    .site-navbar .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .site-navbar .nav-offcanvas {
+        width: min(86vw, 340px);
+    }
+
+    .site-navbar .offcanvas-header {
+        border-bottom: 1px solid #ececec;
+        padding: 18px 20px;
+    }
+
+    .site-navbar .offcanvas-body {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 20px 24px;
+    }
+
+    .site-navbar .nav-links {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    .site-navbar .nav-links .nav-link {
+        border-bottom: 1px solid #f0f0f0;
+        padding: 13px 0;
+        text-align: left;
+    }
+
+    .site-navbar .enquire-btn {
+        width: 100%;
+        max-width: none;
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .site-navbar {
+        padding: 12px 14px;
+    }
+
+    .site-navbar .logo {
+        display: block;
+        width: auto;
+    }
+
+    .site-navbar .nav-links {
+        align-items: stretch;
+        width: 100%;
+    }
 }

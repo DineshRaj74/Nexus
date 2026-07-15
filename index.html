@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script type="text/javascript">
-        emailjs.init("YOUR_PUBLIC_KEY"); // EmailJS Account Public Key
-    </script>
+    <link rel="stylesheet" href="./style.css">
     <title>Nexus Digitalia</title>
 </head>
 
@@ -34,24 +31,44 @@
     </center>
 
     <!--Nav-link-->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="./images/logo.png" alt="Nexus Digitalia Logo">
+    <nav class="navbar navbar-expand-lg site-navbar">
+        <div class="container-fluid nav-container">
+            <a class="navbar-brand logo" href="./index.html">
+                <img src="./images/logo.png" alt="Nexus Digitalia Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end nav-offcanvas" tabindex="-1" id="mainNavbar"
+                aria-labelledby="mainNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="mainNavbarLabel">Nexus Digitalia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav nav-links ms-lg-auto mb-3 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Career</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Contact</a></li>
+                    </ul>
+
+                    <button class="enquire-btn" type="button">Enquire Now</button>
+                </div>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li> <a href="./index.html">Home</a></li>
-            <li> <a href="./index.html">About us</a></li>
-            <li> <a href="./index.html">Services</a></li>
-            <li> <a href="./index.html">Career</a></li>
-            <li> <a href="./index.html">Portfolio</a></li>
-            <li> <a href="./index.html">Contact</a></li>
-        </ul>
-        <button class="enquire-btn">Enquire Now</button>
     </nav>
 
     <!--Slide Nav-->
     <div id="mySidenav" class="sidenav">
-        <a href="#" class="social-btn">
+        <a href="https://www.instagram.com/_._sdrx_._?igsh=MWZ2ZjY1d2I4Nnd6" class="social-btn" target="_blank"
+            rel="noopener noreferrer">
             <span>Instagram</span>
             <img src="./images/instagram.png" alt="">
         </a>
@@ -63,15 +80,16 @@
             <span>Youtube</span>
             <img src="./images/youtube.png" alt="">
         </a>
-        <a href="#" class="social-btn">
-            <span>Linkedln</span>
+        <a href="https://www.linkedin.com/in/dineshra-j07042005/" class="social-btn" target="_blank"
+            rel="noopener noreferrer">
+            <span>LinkedIn</span>
             <img src="./images/social.png" alt="">
         </a>
         <a href="#" class="social-btn">
             <span>Twitter</span>
             <img src="./images/twitter.png" alt="">
         </a>
-        <a href="#" class="social-btn">
+        <a href="tel:+91 6380115993" class="social-btn">
             <span>Call Us</span>
             <img src="./images/phone.png" alt="">
         </a>
@@ -676,8 +694,8 @@
                                         had a good experience </h5>
                                     <p class="name">
                                         Dream Studio Photography
-                                    <p>
-                                        <span class="title">CEO</span>
+                                    </p>
+                                    <span class="title">CEO</span>
                                 </div>
                             </div>
 
@@ -953,47 +971,48 @@
             </div>
         </footer>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            // 1. Form-la irukura field values-ai edukkirom
+            const form = document.querySelector('.contact-form');
+            const name = form.querySelector('input[name="name"]').value;
+            const clientPhone = form.querySelector('input[name="phone"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+            const location = form.querySelector('input[name="location"]').value;
+            const subject = form.querySelector('input[name="subject"]').value;
+            const description = form.querySelector('textarea[name="message"]').value;
+
+            // Validation Check: Edhavadhu mukkiyamaana field kaaliya irundha alert pannum
+            if (!name || !clientPhone || !email || !description) {
+                alert("Please fill in all the required fields!");
+                return;
+            }
+
+            // 2. Message content-ai ready panrom
+            const rawMessage = `New Form Submission:\n\n` +
+                `Name: ${name}\n` +
+                `Phone: ${clientPhone}\n` +
+                `Email: ${email}\n` +
+                `Location: ${location}\n` +
+                `Subject: ${subject}\n` +
+                `Message: ${description}`;
+
+            // 3. --- WHATSAPP LOGIC ---
+            const myPhone = "916380115993"; // Unga number with 91
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${myPhone}&text=${encodeURIComponent(rawMessage)}`;
+
+            // 4. --- EMAIL LOGIC (Direct FormToEmail Link) ---
+            const myEmail = "dinneshraj7@gmail.com"; // Unga email
+            const mailtoUrl = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(rawMessage)}`;
+
+            // 5. Renduமே instant-ah trigger panrom
+            window.open(whatsappUrl, '_blank'); // WhatsApp-ai puthiya tab-il thirakkum
+            window.location.href = mailtoUrl;   // Email app-ai background-il trigger pannum
+        });
+    </script>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    document.getElementById('submitBtn').addEventListener('click', function () {
-        // 1. Form-la irukura field values-ai edukkirom
-        const form = document.querySelector('.contact-form');
-        const name = form.querySelector('input[name="name"]').value;
-        const clientPhone = form.querySelector('input[name="phone"]').value;
-        const email = form.querySelector('input[name="email"]').value;
-        const location = form.querySelector('input[name="location"]').value;
-        const subject = form.querySelector('input[name="subject"]').value;
-        const description = form.querySelector('textarea[name="message"]').value;
-
-        // Validation Check: Edhavadhu mukkiyamaana field kaaliya irundha alert pannum
-        if (!name || !clientPhone || !email || !description) {
-            alert("Please fill in all the required fields!");
-            return;
-        }
-
-        // 2. Message content-ai ready panrom
-        const rawMessage = `New Form Submission:\n\n` +
-            `Name: ${name}\n` +
-            `Phone: ${clientPhone}\n` +
-            `Email: ${email}\n` +
-            `Location: ${location}\n` +
-            `Subject: ${subject}\n` +
-            `Message: ${description}`;
-
-        // 3. --- WHATSAPP LOGIC ---
-        const myPhone = "916380115993"; // Unga number with 91
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=${myPhone}&text=${encodeURIComponent(rawMessage)}`;
-
-        // 4. --- EMAIL LOGIC (Direct FormToEmail Link) ---
-        const myEmail = "dinneshraj7@gmail.com"; // Unga email
-        const mailtoUrl = `mailto:${myEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(rawMessage)}`;
-
-        // 5. Renduமே instant-ah trigger panrom
-        window.open(whatsappUrl, '_blank'); // WhatsApp-ai puthiya tab-il thirakkum
-        window.location.href = mailtoUrl;   // Email app-ai background-il trigger pannum
-    });
-</script>
 
 </html>
